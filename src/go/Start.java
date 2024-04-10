@@ -2,7 +2,8 @@ package go;
 
 import java.util.ArrayList;
 
-import clases.FicheroWriter;
+import clases.FicheroWriterSeries;
+import clases.FicheroWriterVideojuegos;
 import clases.Serie;
 import clases.Videojuego;
 
@@ -69,8 +70,11 @@ public class Start {
 		System.out.println("Hay " + contadorSeries + " series entregadas");
 		System.out.println("Hay " + contadorVideojuegos + " videojuegos entregados");
 		
-		FicheroWriter writer = new FicheroWriter();
-        writer.writeToFile(series, videojuegos);
+		FicheroWriterSeries writer = new FicheroWriterSeries();
+        writer.writeToFile(series);
+        
+       FicheroWriterVideojuegos escribir = new FicheroWriterVideojuegos();
+       escribir.writeToFile(videojuegos);
 		
 	}
 
